@@ -34,10 +34,7 @@ export default function Hero() {
             <span ref={typeRef} />
           </p>
           <p className="text-base md:text-lg font-serif text-gray-700 leading-relaxed mb-6 md:mb-8 max-w-lg">
-            Hey, I'm <strong className="text-blue-600">Joshua</strong>. I'm an <strong className="text-blue-600">AI/ML researcher</strong> and <strong className="text-blue-600">computer science student</strong> from <strong className="text-blue-600">Davao, Philippines</strong> exploring how technology can drive meaningful social change. I believe in building solutions that are <strong className="text-blue-600">not just technically sound, but ethically grounded</strong> and accessible to everyone.
-          </p>
-          <p className="text-base md:text-lg font-serif text-gray-700 leading-relaxed mb-6 md:mb-8 max-w-lg">
-            Right now, I'm working on my thesis about <strong className="text-blue-600">indoor positioning systems</strong> using <strong className="text-blue-600">transfer learning</strong>. Beyond research, I'm passionate about <strong className="text-blue-600">AI ethics</strong>, <strong className="text-blue-600">digital governance</strong>, and how <strong className="text-blue-600">law and philosophy</strong> shape responsible technology. When I'm not coding, you'll find me reading, writing, podcasting, or engaging in good debates.
+            I'm an <strong className="text-blue-600">AI/ML researcher</strong> and <strong className="text-blue-600">computer science student</strong> from <strong className="text-blue-600">Davao, Philippines</strong>. I build ethical, human-centered technology solutions. Explore my work to learn more about my research, projects, and vision.
           </p>
         </div>
         <div className="flex justify-center md:justify-end">
