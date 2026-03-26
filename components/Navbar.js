@@ -39,7 +39,7 @@ export default function Navbar() {
             <Link
               key={link.label}
               href={link.href}
-              className={`pb-1 transition-all duration-300 ease-in-out border-b-4 no-underline transform hover:scale-105 ${
+              className={`pb-1 transition-all duration-500 ease-in-out border-b-4 no-underline ${
                 pathname === link.href
                   ? "border-b-4 border-[#A31F34] text-[#A31F34]"
                   : "border-b-4 border-transparent text-black hover:text-[#A31F34] hover:border-[#A31F34]"

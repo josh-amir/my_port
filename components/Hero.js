@@ -11,11 +11,12 @@ export default function Hero() {
       strings: [
         "AI & ML Researcher.",
         "CS Student.",
+        "Data Scientist.",
         "Civic Tech Builder.",
       ],
-      typeSpeed: 40,
-      backSpeed: 40,
-      backDelay: 2000,
+      typeSpeed: 50,
+      backSpeed: 50,
+      backDelay: 2500,
       loop: true,
       showCursor: false,
     });
@@ -48,14 +49,14 @@ export default function Hero() {
               href="https://github.com/josh-amir"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-4 md:px-8 py-3 md:py-4 border-4 border-[#A31F34] bg-[#A31F34] text-white font-black text-xs md:text-sm tracking-widest uppercase hover:bg-black hover:border-black transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
+              className="px-4 md:px-8 py-3 md:py-4 border-4 border-[#A31F34] bg-[#A31F34] text-white font-black text-xs md:text-sm tracking-widest uppercase transition-all duration-500 ease-in-out hover:bg-black hover:border-black hover:shadow-xl"
             >
               GITHUB
             </a>
             <a
               href="/cv.pdf"
               download
-              className="px-4 md:px-8 py-3 md:py-4 border-4 border-black text-black font-black text-xs md:text-sm tracking-widest uppercase hover:bg-black hover:text-white transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-lg"
+              className="px-4 md:px-8 py-3 md:py-4 border-4 border-black text-black font-black text-xs md:text-sm tracking-widest uppercase transition-all duration-500 ease-in-out hover:bg-black hover:text-white hover:shadow-xl"
             >
               CV
             </a>

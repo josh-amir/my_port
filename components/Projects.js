@@ -64,7 +64,7 @@ export default function Projects() {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#A31F34] border-b-4 border-[#A31F34] pb-1 hover:bg-[#A31F34] hover:text-white hover:border-black transition-all duration-300 ease-in-out transform hover:scale-110 px-2"
+                  className="text-[#A31F34] border-b-4 border-[#A31F34] pb-1 hover:bg-[#A31F34] hover:text-white hover:border-black transition-all duration-500 ease-in-out px-2"
                 >
                   → CODE
                 </a>
@@ -74,7 +74,7 @@ export default function Projects() {
                   href={project.demo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#A31F34] border-b-4 border-[#A31F34] pb-1 hover:bg-[#A31F34] hover:text-white hover:border-black transition-all duration-300 ease-in-out transform hover:scale-110 px-2"
+                  className="text-[#A31F34] border-b-4 border-[#A31F34] pb-1 hover:bg-[#A31F34] hover:text-white hover:border-black transition-all duration-500 ease-in-out px-2"
                 >
                   → DEMO
                 </a>
