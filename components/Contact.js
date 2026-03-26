@@ -1,5 +1,8 @@
 "use client";
 
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import Link from "next/link";
+
 export default function Contact() {
   return (
     <div className="text-center">
@@ -19,11 +22,36 @@ export default function Contact() {
       </div>
 
       <div>
-        <p className="text-sm md:text-base font-serif text-gray-600 mb-4">Or connect with me on</p>
-        <div className="flex justify-center gap-6 md:gap-12 text-sm md:text-base font-serif text-gray-700 flex-wrap">
-          <a href="https://github.com/josh-amir" className="text-blue-600 hover:text-blue-800 hover:underline">GitHub</a>
-          <a href="https://www.linkedin.com/in/prince-joshua-ngojo-8737b2314/" className="text-blue-600 hover:text-blue-800 hover:underline">LinkedIn</a>
-          <a href="https://linktr.ee/pjngojo" className="text-blue-600 hover:text-blue-800 hover:underline">Linktree</a>
+        <p className="text-sm md:text-base font-serif text-gray-600 mb-6">Or connect with me on</p>
+        <div className="flex justify-center gap-8 md:gap-12 flex-wrap">
+          <a
+            href="https://github.com/josh-amir"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-700 hover:text-blue-600 transition-colors"
+            aria-label="GitHub"
+          >
+            <FaGithub size={32} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/prince-joshua-ngojo-8737b2314/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-700 hover:text-blue-600 transition-colors"
+            aria-label="LinkedIn"
+          >
+            <FaLinkedin size={32} />
+          </a>
+          <a
+            href="https://linktr.ee/pjngojo"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-gray-700 hover:text-blue-600 transition-colors text-3xl"
+            aria-label="Linktree"
+            title="Linktree"
+          >
+            🔗
+          </a>
         </div>
       </div>
     </div>
