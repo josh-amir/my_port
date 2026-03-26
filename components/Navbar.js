@@ -17,9 +17,9 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b-4 border-black">
-      <div className="max-w-5xl mx-auto px-3 md:px-6 py-4 md:py-6 flex items-center justify-between">
-        <Link href="/" className="text-xl md:text-3xl font-black text-black hover:text-[#A31F34] transition-colors no-underline tracking-tighter">
-          PRINCE JOSHUA
+      <div className="max-w-5xl mx-auto px-4 md:px-6 py-5 md:py-6 flex items-center justify-between">
+        <Link href="/" className="text-2xl md:text-3xl font-black text-black hover:text-[#A31F34] transition-colors no-underline tracking-tighter">
+          PRINCE JOSHUA NGOJO
         </Link>
 
         {/* Mobile Menu Button */}

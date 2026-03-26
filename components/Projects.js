@@ -40,31 +40,31 @@ const projects = [
 
 export default function Projects() {
   return (
-    <div className="px-4 md:px-0">
-      <h2 className="text-4xl md:text-7xl font-black mb-8 md:mb-20 text-black tracking-tighter border-b-4 border-[#A31F34] pb-4 md:pb-6">PROJECTS</h2>
-      <ul className="space-y-8 md:space-y-16">
+    <div>
+      <h2 className="text-5xl md:text-7xl font-black mb-14 md:mb-20 text-black tracking-tighter border-b-4 border-[#A31F34] pb-6">PROJECTS</h2>
+      <ul className="space-y-12 md:space-y-16">
         {projects.map((project) => (
-          <li key={project.title} className="border-l-8 border-[#A31F34] pl-4 md:pl-10 py-2 md:py-4 border-b-2 border-black pb-6 md:pb-8">
-            <h3 className="font-black text-lg md:text-4xl text-black mb-3 md:mb-4 leading-tight tracking-tight">
+          <li key={project.title} className="border-l-8 border-[#A31F34] pl-6 md:pl-10 py-4 border-b-2 border-black pb-8">
+            <h3 className="font-black text-2xl md:text-4xl text-black mb-4 leading-tight tracking-tight">
               {project.title}
             </h3>
-            <p className="text-sm md:text-xl font-bold text-black leading-relaxed mb-4 md:mb-6">
+            <p className="text-lg md:text-xl font-bold text-black leading-relaxed mb-6">
               {project.description}
             </p>
-            <div className="flex flex-wrap gap-1.5 md:gap-2 mb-6 md:mb-8">
+            <div className="flex flex-wrap gap-2 mb-8">
               {project.tags.map((tag) => (
-                <span key={tag} className="text-xs font-black bg-[#A31F34] text-white px-2 md:px-3 py-1 md:py-2 border-2 border-black uppercase tracking-wide">
+                <span key={tag} className="text-xs md:text-sm font-black bg-[#A31F34] text-white px-3 py-2 border-2 border-black uppercase tracking-wide">
                   {tag}
                 </span>
               ))}
             </div>
-            <div className="flex gap-4 md:gap-8 flex-wrap text-xs md:text-lg font-black">
+            <div className="flex gap-8 flex-wrap text-base md:text-lg font-black">
               {project.github && (
                 <a
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#A31F34] border-b-4 border-[#A31F34] pb-1 hover:bg-[#A31F34] hover:text-white hover:border-black transition-all px-1 md:px-2"
+                  className="text-[#A31F34] border-b-4 border-[#A31F34] pb-1 hover:bg-[#A31F34] hover:text-white hover:border-black transition-all px-2"
                 >
                   → CODE
                 </a>
@@ -74,7 +74,7 @@ export default function Projects() {
                   href={project.demo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#A31F34] border-b-4 border-[#A31F34] pb-1 hover:bg-[#A31F34] hover:text-white hover:border-black transition-all px-1 md:px-2"
+                  className="text-[#A31F34] border-b-4 border-[#A31F34] pb-1 hover:bg-[#A31F34] hover:text-white hover:border-black transition-all px-2"
                 >
                   → DEMO
                 </a>
