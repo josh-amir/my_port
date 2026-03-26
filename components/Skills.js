@@ -39,37 +39,37 @@ const leadershipExperience = [
 export default function Skills() {
   return (
     <div>
-      <h2 className="text-3xl md:text-4xl font-serif font-light mb-8 md:mb-10 text-gray-900">Skills</h2>
-      <div className="grid gap-10 md:gap-16 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-        <div>
-          <h3 className="font-serif font-light text-xl md:text-2xl text-gray-900 mb-4 md:mb-6">Research & AI</h3>
-          <ul className="space-y-3 text-base md:text-lg font-serif text-gray-700">
+      <h2 className="text-5xl md:text-6xl font-black mb-12 md:mb-16 text-black tracking-tighter">SKILLS</h2>
+      <div className="grid gap-8 md:gap-12 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+        <div className="border-l-8 border-black pl-6">
+          <h3 className="font-black text-2xl text-black mb-6">RESEARCH & AI</h3>
+          <ul className="space-y-3 text-lg font-bold text-black">
             {researchSkills.map((skill) => (
-              <li key={skill}>• {skill}</li>
+              <li key={skill}>■ {skill}</li>
             ))}
           </ul>
         </div>
-        <div>
-          <h3 className="font-serif font-light text-xl md:text-2xl text-gray-900 mb-4 md:mb-6">Engineering</h3>
-          <ul className="space-y-3 text-base md:text-lg font-serif text-gray-700">
+        <div className="border-l-8 border-black pl-6">
+          <h3 className="font-black text-2xl text-black mb-6">ENGINEERING</h3>
+          <ul className="space-y-3 text-lg font-bold text-black">
             {engineeringSkills.map((skill) => (
-              <li key={skill}>• {skill}</li>
+              <li key={skill}>■ {skill}</li>
             ))}
           </ul>
         </div>
-        <div>
-          <h3 className="font-serif font-light text-xl md:text-2xl text-gray-900 mb-4 md:mb-6">Volunteering</h3>
-          <ul className="space-y-3 text-base md:text-lg font-serif text-gray-700">
+        <div className="border-l-8 border-black pl-6">
+          <h3 className="font-black text-2xl text-black mb-6">VOLUNTEERING</h3>
+          <ul className="space-y-3 text-lg font-bold text-black">
             {volunteeringExperience.map((experience) => (
-              <li key={experience}>• {experience}</li>
+              <li key={experience}>■ {experience}</li>
             ))}
           </ul>
         </div>
-        <div>
-          <h3 className="font-serif font-light text-xl md:text-2xl text-gray-900 mb-4 md:mb-6">Leadership</h3>
-          <ul className="space-y-3 text-base md:text-lg font-serif text-gray-700">
+        <div className="border-l-8 border-black pl-6">
+          <h3 className="font-black text-2xl text-black mb-6">LEADERSHIP</h3>
+          <ul className="space-y-3 text-lg font-bold text-black">
             {leadershipExperience.map((experience) => (
-              <li key={experience}>• {experience}</li>
+              <li key={experience}>■ {experience}</li>
             ))}
           </ul>
         </div>

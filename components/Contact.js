@@ -6,50 +6,50 @@ import { SiLinktree } from "react-icons/si";
 export default function Contact() {
   return (
     <div className="text-center">
-      <h2 className="text-3xl md:text-4xl font-serif font-light mb-4 md:mb-6 text-gray-900">Get in Touch</h2>
-      <p className="text-base md:text-lg font-serif text-gray-700 mb-8 md:mb-12 max-w-2xl mx-auto leading-relaxed">
-        I'm always interested in discussing <strong className="text-blue-600">research collaborations</strong>, <strong className="text-blue-600">meaningful projects</strong>, and conversations about AI, ethics, and social impact. Feel free to reach out!
+      <h2 className="text-5xl md:text-6xl font-black mb-8 md:mb-12 text-black tracking-tighter">GET IN TOUCH</h2>
+      <p className="text-xl md:text-2xl font-bold text-black mb-12 md:mb-20 max-w-3xl mx-auto leading-tight">
+        I'm interested in discussing <span className="border-b-4 border-black">research collaborations</span>, <span className="border-b-4 border-black">meaningful projects</span>, and conversations about AI, ethics, and social impact. Let's connect.
       </p>
 
-      <div className="mb-8 md:mb-12">
-        <p className="text-sm md:text-base font-serif text-gray-600 mb-3">Email me directly</p>
+      <div className="mb-16 md:mb-24">
+        <p className="text-xl font-black text-black mb-6 tracking-widest">EMAIL</p>
         <a
           href="mailto:princengojo@g.cjc.edu.ph"
-          className="inline-block text-base md:text-lg font-serif text-blue-600 hover:text-blue-800 font-medium break-all"
+          className="inline-block text-2xl md:text-3xl font-black text-black border-b-4 border-black pb-2 hover:opacity-70 transition-opacity"
         >
-          princengojo@g.cjc.edu.ph
+          PRINCENGOJO@G.CJC.EDU.PH
         </a>
       </div>
 
       <div>
-        <p className="text-sm md:text-base font-serif text-gray-600 mb-6">Or connect with me on</p>
-        <div className="flex justify-center gap-8 md:gap-12 flex-wrap items-center">
+        <p className="text-xl font-black text-black mb-8 tracking-widest">CONNECT ON</p>
+        <div className="flex justify-center gap-12 md:gap-16 flex-wrap items-center">
           <a
             href="https://github.com/josh-amir"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-700 hover:text-blue-600 transition-colors"
+            className="text-black hover:opacity-70 transition-opacity"
             aria-label="GitHub"
           >
-            <FaGithub size={32} />
+            <FaGithub size={48} />
           </a>
           <a
             href="https://www.linkedin.com/in/prince-joshua-ngojo-8737b2314/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-700 hover:text-blue-600 transition-colors"
+            className="text-black hover:opacity-70 transition-opacity"
             aria-label="LinkedIn"
           >
-            <FaLinkedin size={32} />
+            <FaLinkedin size={48} />
           </a>
           <a
             href="https://linktr.ee/pjngojo"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-700 hover:text-blue-600 transition-colors"
+            className="text-black hover:opacity-70 transition-opacity"
             aria-label="Linktree"
           >
-            <SiLinktree size={32} />
+            <SiLinktree size={48} />
           </a>
         </div>
       </div>
