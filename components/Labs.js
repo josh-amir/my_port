@@ -33,10 +33,18 @@ const labsContent = [
     category: "SHORT FILMS",
     items: [
       {
-        title: "Coming Soon",
-        description: "Visual storytelling exploring technology's impact on communities in the Global South.",
-        link: "#",
+        title: "The Session",
+        description: "A psychological thriller following Dr. Eli, a couples therapist with a sinister double life. What happens behind closed doors when therapy becomes a mask for something far darker?",
+        link: "https://www.facebook.com/share/v/1BADyRURb3/",
+        poster: "/images/thesession.jpg",
         cta: "WATCH"
+      },
+      {
+        title: "The Four-saken Truths",
+        description: "Four college students bound by a tragic accident uncover a web of lies, secrets, and buried truths. As deception and betrayal unravel, each revelation tests their bonds and challenges everything they believe in—will they uphold justice, or will darkness consume them?",
+        link: null,
+        poster: "/images/forsakentruths.jpg",
+        cta: "COMING SOON"
       }
     ]
   }
@@ -60,6 +68,15 @@ export default function Labs() {
             <div className="grid gap-8 md:gap-12 border-l-8 border-[#A31F34] pl-6 md:pl-10">
               {lab.items.map((item, itemIdx) => (
                 <div key={itemIdx} className="border-2 border-black p-6 md:p-8 hover:border-4 hover:border-[#A31F34] transition-all duration-500 ease-in-out hover:shadow-xl">
+                  {item.poster && (
+                    <div className="mb-6 md:mb-8 border-2 border-black overflow-hidden max-w-md md:max-w-lg mx-auto">
+                      <img
+                        src={item.poster}
+                        alt={item.title}
+                        className="w-full h-auto object-cover hover:opacity-90 transition-opacity duration-500"
+                      />
+                    </div>
+                  )}
                   <h4 className="text-xl md:text-2xl font-black text-black mb-3 tracking-tight uppercase">
                     {item.title}
                   </h4>
@@ -68,11 +85,16 @@ export default function Labs() {
                   </p>
                   <a
                     href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block px-4 md:px-6 py-2 md:py-3 border-3 border-[#A31F34] text-[#A31F34] font-black text-xs md:text-sm tracking-widest uppercase transition-all duration-500 ease-in-out hover:bg-[#A31F34] hover:text-white hover:border-[#A31F34]"
+                    target={item.link ? "_blank" : undefined}
+                    rel={item.link ? "noopener noreferrer" : undefined}
+                    className={`inline-block px-4 md:px-6 py-2 md:py-3 border-3 font-black text-xs md:text-sm tracking-widest uppercase transition-all duration-500 ease-in-out ${
+                      item.link
+                        ? "border-[#A31F34] text-[#A31F34] hover:bg-[#A31F34] hover:text-white hover:border-[#A31F34] cursor-pointer"
+                        : "border-black text-black bg-black text-white cursor-not-allowed"
+                    }`}
+                    onClick={(e) => !item.link && e.preventDefault()}
                   >
-                    {item.cta} →
+                    {item.cta}
                   </a>
                 </div>
               ))}
