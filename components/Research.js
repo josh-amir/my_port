@@ -4,10 +4,10 @@ export default function Research() {
   return (
     <div>
       <div id="research" />
-      <div className="grid gap-12 md:gap-16 grid-cols-1 md:grid-cols-2">
-        <div className="border-l-8 border-[#A31F34] pl-8">
-          <h2 className="text-6xl md:text-7xl font-black mb-10 text-black tracking-tighter border-b-4 border-[#A31F34] pb-6">ABOUT</h2>
-          <div className="space-y-6 md:space-y-8 text-lg md:text-lg font-bold text-black leading-relaxed">
+      <div className="grid gap-10 md:gap-16 grid-cols-1 md:grid-cols-2 px-4 md:px-0">
+        <div className="border-l-8 border-[#A31F34] pl-4 md:pl-8">
+          <h2 className="text-4xl md:text-7xl font-black mb-6 md:mb-10 text-black tracking-tighter border-b-4 border-[#A31F34] pb-4 md:pb-6">ABOUT</h2>
+          <div className="space-y-4 md:space-y-8 text-base md:text-lg font-bold text-black leading-relaxed">
             <p>
               I'm deeply interested in the intersection of <span className="text-[#A31F34] font-black border-b-4 border-[#A31F34]">technology</span>, <span className="text-[#A31F34] font-black border-b-4 border-[#A31F34]">ethics</span>, <span className="text-[#A31F34] font-black border-b-4 border-[#A31F34]">law</span>, and <span className="text-[#A31F34] font-black border-b-4 border-[#A31F34]">philosophy</span>. My work focuses on AI ethics, responsible AI design, and building transparent, trustworthy systems.
             </p>
@@ -22,15 +22,15 @@ export default function Research() {
             </p>
           </div>
         </div>
-        <div className="border-l-8 border-[#A31F34] pl-8 pt-8 md:pt-0">
-          <h3 className="font-black text-5xl md:text-6xl mb-10 text-black tracking-tighter border-b-4 border-[#A31F34] pb-6">EDUCATION</h3>
-          <div className="space-y-8">
+        <div className="border-l-8 border-[#A31F34] pl-4 md:pl-8 pt-8 md:pt-0">
+          <h3 className="font-black text-4xl md:text-6xl mb-6 md:mb-10 text-black tracking-tighter border-b-4 border-[#A31F34] pb-4 md:pb-6">EDUCATION</h3>
+          <div className="space-y-6 md:space-y-8">
             <div>
-              <p className="text-2xl md:text-3xl font-black text-black mb-3">BS COMPUTER SCIENCE</p>
-              <p className="text-xl font-black text-[#A31F34]">3RD YEAR</p>
+              <p className="text-lg md:text-3xl font-black text-black mb-2">BS COMPUTER SCIENCE</p>
+              <p className="text-base md:text-xl font-black text-[#A31F34]">3RD YEAR</p>
             </div>
-            <div className="border-t-4 border-[#A31F34] pt-8">
-              <p className="text-3xl md:text-4xl font-black text-[#A31F34] tracking-tighter">DAVAO, PHILIPPINES</p>
+            <div className="border-t-4 border-[#A31F34] pt-6 md:pt-8">
+              <p className="text-xl md:text-4xl font-black text-[#A31F34] tracking-tighter">DAVAO, PHILIPPINES</p>
             </div>
           </div>
         </div>
