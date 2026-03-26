@@ -36,13 +36,13 @@ const projects = [
 export default function Projects() {
   return (
     <div>
-      <h2 className="text-4xl font-serif font-light mb-10 text-gray-900">Projects</h2>
-      <ul className="space-y-8">
+      <h2 className="text-3xl md:text-4xl font-serif font-light mb-8 md:mb-10 text-gray-900">Projects</h2>
+      <ul className="space-y-6 md:space-y-8">
         {projects.map((project) => (
-          <li key={project.title} className="border-b border-gray-200 pb-8">
-            <h3 className="font-serif text-xl font-light text-gray-900 mb-3"><strong className="text-blue-600">{project.title}</strong></h3>
-            <p className="text-lg font-serif text-gray-700 leading-relaxed mb-4">{project.description}</p>
-            <p className="text-base font-serif text-gray-600">{project.tags.join(" • ")}</p>
+          <li key={project.title} className="border-b border-gray-200 pb-6 md:pb-8">
+            <h3 className="font-serif text-lg md:text-xl font-light text-gray-900 mb-2 md:mb-3"><strong className="text-blue-600">{project.title}</strong></h3>
+            <p className="text-base md:text-lg font-serif text-gray-700 leading-relaxed mb-3 md:mb-4">{project.description}</p>
+            <p className="text-sm md:text-base font-serif text-gray-600 flex flex-wrap gap-2">{project.tags.join(" • ")}</p>
           </li>
         ))}
       </ul>
