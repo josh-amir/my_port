@@ -1,7 +1,7 @@
 "use client";
 
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import Link from "next/link";
+import { SiLinktree } from "react-icons/si";
 
 export default function Contact() {
   return (
@@ -23,7 +23,7 @@ export default function Contact() {
 
       <div>
         <p className="text-sm md:text-base font-serif text-gray-600 mb-6">Or connect with me on</p>
-        <div className="flex justify-center gap-8 md:gap-12 flex-wrap">
+        <div className="flex justify-center gap-8 md:gap-12 flex-wrap items-center">
           <a
             href="https://github.com/josh-amir"
             target="_blank"
@@ -46,11 +46,10 @@ export default function Contact() {
             href="https://linktr.ee/pjngojo"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-700 hover:text-blue-600 transition-colors text-3xl"
+            className="text-gray-700 hover:text-blue-600 transition-colors"
             aria-label="Linktree"
-            title="Linktree"
           >
-            🔗
+            <SiLinktree size={32} />
           </a>
         </div>
       </div>
