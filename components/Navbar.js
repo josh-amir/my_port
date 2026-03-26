@@ -34,12 +34,12 @@ export default function Navbar() {
         </button>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex gap-10 text-sm md:text-base font-black tracking-wider uppercase">
+        <div className="hidden md:flex gap-12 text-sm md:text-base font-black tracking-widest uppercase border-b-4 border-black pb-3">
           {navLinks.map((link) => (
             <Link
               key={link.label}
               href={link.href}
-              className={`pb-1 transition-all border-b-4 no-underline ${
+              className={`pb-1 transition-all duration-300 ease-in-out border-b-4 no-underline transform hover:scale-105 ${
                 pathname === link.href
                   ? "border-b-4 border-[#A31F34] text-[#A31F34]"
                   : "border-b-4 border-transparent text-black hover:text-[#A31F34] hover:border-[#A31F34]"

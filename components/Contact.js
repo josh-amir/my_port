@@ -15,7 +15,7 @@ export default function Contact() {
         <p className="text-sm font-black text-black mb-6 tracking-widest uppercase">Email</p>
         <a
           href="mailto:princengojo@g.cjc.edu.ph"
-          className="inline-block text-3xl md:text-4xl font-black text-black border-b-4 border-[#A31F34] pb-3 hover:text-[#A31F34] transition-colors tracking-tight"
+          className="inline-block text-lg md:text-5xl font-black text-black border-b-4 border-[#A31F34] pb-3 md:pb-5 hover:text-[#A31F34] transition-all duration-300 ease-in-out tracking-tight break-all uppercase transform hover:scale-105"
         >
           PRINCENGOJO@G.CJC.EDU.PH
         </a>
@@ -28,28 +28,28 @@ export default function Contact() {
             href="https://github.com/josh-amir"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-black hover:opacity-70 transition-opacity"
+            className="text-[#A31F34] hover:text-black transition-all duration-300 ease-in-out border-4 border-[#A31F34] p-3 hover:border-black transform hover:scale-125 hover:shadow-lg"
             aria-label="GitHub"
           >
-            <FaGithub size={48} />
+            <FaGithub size={56} />
           </a>
           <a
             href="https://www.linkedin.com/in/prince-joshua-ngojo-8737b2314/"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-black hover:opacity-70 transition-opacity"
+            className="text-[#A31F34] hover:text-black transition-all duration-300 ease-in-out border-4 border-[#A31F34] p-3 hover:border-black transform hover:scale-125 hover:shadow-lg"
             aria-label="LinkedIn"
           >
-            <FaLinkedin size={48} />
+            <FaLinkedin size={56} />
           </a>
           <a
             href="https://linktr.ee/pjngojo"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-black hover:opacity-70 transition-opacity"
+            className="text-[#A31F34] hover:text-black transition-all duration-300 ease-in-out border-4 border-[#A31F34] p-3 hover:border-black transform hover:scale-125 hover:shadow-lg"
             aria-label="Linktree"
           >
-            <SiLinktree size={48} />
+            <SiLinktree size={56} />
           </a>
         </div>
       </div>
