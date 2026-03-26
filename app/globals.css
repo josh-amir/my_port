@@ -6,7 +6,8 @@
   color-scheme: light;
   --background: #ffffff;
   --foreground: #000000;
-  --accent: #000000;
+  --mit-red: #A31F34;
+  --mit-gray: #3D3D3D;
   --border: #000000;
 }
 
@@ -17,7 +18,8 @@ html {
 body {
   @apply bg-background text-foreground font-sans;
   font-weight: 400;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.3px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
 }
 
 a {
@@ -28,60 +30,75 @@ a {
 }
 
 a:hover {
-  opacity: 0.7;
+  opacity: 0.85;
 }
 
-/* Brutalism: Heavy borders and bold typography */
+/* MIT Typography - Bold, clean, functional */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
-  letter-spacing: -1px;
+  letter-spacing: -0.5px;
 }
 
 .section-container {
   @apply min-h-screen w-full flex items-center justify-center py-12 md:py-20;
-  border-bottom: 3px solid #000000;
+  border-bottom: 2px solid #000000;
 }
 
 .section-content {
   @apply max-w-5xl mx-auto px-4 md:px-6 w-full;
 }
 
-/* Brutalism cards with heavy borders */
-.brutalist-card {
-  @apply p-4 md:p-8;
-  border: 3px solid #000000;
+/* MIT Style Cards */
+.mit-card {
+  @apply p-6 md:p-8;
+  border: 2px solid #000000;
   background: #ffffff;
 }
 
-.brutalist-card:hover {
-  border-width: 3px;
-  box-shadow: 8px 8px 0px rgba(0, 0, 0, 0.1);
-  transform: translate(-2px, -2px);
+.mit-card:hover {
+  border-width: 2px;
+  box-shadow: 0 8px 16px rgba(163, 31, 52, 0.08);
   transition: all 0.2s ease-in-out;
 }
 
-/* Brutalism buttons */
-.btn-brutalist {
+/* MIT Buttons */
+.btn-mit {
   @apply px-6 py-3 border-2 border-black font-bold text-black;
   background: #ffffff;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 13px;
 }
 
-.btn-brutalist:hover {
+.btn-mit:hover {
   @apply bg-black text-white;
 }
 
-.btn-brutalist-solid {
-  @apply px-6 py-3 border-2 border-black bg-black text-white font-bold;
-  letter-spacing: 1px;
+.btn-mit-solid {
+  @apply px-6 py-3 border-2 font-bold text-white;
+  background: var(--mit-red);
+  border-color: var(--mit-red);
+  letter-spacing: 0.5px;
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 13px;
 }
 
-.btn-brutalist-solid:hover {
-  @apply bg-white text-black border-black;
+.btn-mit-solid:hover {
+  @apply bg-black;
+  border-color: #000000;
+}
+
+/* MIT Accent */
+.mit-accent {
+  color: var(--mit-red);
+}
+
+.mit-border-left {
+  border-left: 4px solid var(--mit-red);
+}
+
+.mit-border-bottom {
+  border-bottom: 3px solid var(--mit-red);
 }
 
 

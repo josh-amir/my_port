@@ -41,30 +41,30 @@ const projects = [
 export default function Projects() {
   return (
     <div>
-      <h2 className="text-5xl md:text-6xl font-black mb-12 md:mb-16 text-black tracking-tighter">PROJECTS</h2>
-      <ul className="space-y-8 md:space-y-12">
+      <h2 className="text-5xl md:text-7xl font-black mb-14 md:mb-20 text-black tracking-tighter border-b-4 border-[#A31F34] pb-6">PROJECTS</h2>
+      <ul className="space-y-12 md:space-y-16">
         {projects.map((project) => (
-          <li key={project.title} className="border-l-8 border-black pl-6 md:pl-8 py-4">
-            <h3 className="font-black text-2xl md:text-3xl text-black mb-4 leading-tight">
+          <li key={project.title} className="border-l-8 border-[#A31F34] pl-6 md:pl-10 py-4 border-b-2 border-black pb-8">
+            <h3 className="font-black text-2xl md:text-4xl text-black mb-4 leading-tight tracking-tight">
               {project.title}
             </h3>
-            <p className="text-lg md:text-xl font-semibold text-black leading-relaxed mb-6">
+            <p className="text-lg md:text-xl font-bold text-black leading-relaxed mb-6">
               {project.description}
             </p>
-            <div className="flex flex-wrap gap-3 mb-6">
+            <div className="flex flex-wrap gap-2 mb-8">
               {project.tags.map((tag) => (
-                <span key={tag} className="text-sm md:text-base font-bold bg-black text-white px-3 md:px-4 py-1.5 border-2 border-black">
+                <span key={tag} className="text-xs md:text-sm font-black bg-[#A31F34] text-white px-3 py-2 border-2 border-black uppercase tracking-wide">
                   {tag}
                 </span>
               ))}
             </div>
-            <div className="flex gap-6 flex-wrap">
+            <div className="flex gap-8 flex-wrap text-base md:text-lg font-black">
               {project.github && (
                 <a
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-bold text-black border-b-4 border-black pb-1 hover:opacity-70 transition-opacity"
+                  className="text-[#A31F34] border-b-4 border-[#A31F34] pb-1 hover:bg-[#A31F34] hover:text-white hover:border-black transition-all px-2"
                 >
                   → CODE
                 </a>
@@ -74,7 +74,7 @@ export default function Projects() {
                   href={project.demo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-bold text-black border-b-4 border-black pb-1 hover:opacity-70 transition-opacity"
+                  className="text-[#A31F34] border-b-4 border-[#A31F34] pb-1 hover:bg-[#A31F34] hover:text-white hover:border-black transition-all px-2"
                 >
                   → DEMO
                 </a>
