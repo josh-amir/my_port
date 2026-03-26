@@ -16,7 +16,11 @@ const garamond = EB_Garamond({
 
 export const metadata = {
   title: "Prince Joshua Ngojo. | AI/ML Researcher",
-  description: "Personal portfolio of Prince Joshua Ngojo., AI/ML researcher and CS student from the Philippines."
+  description: "Personal portfolio of Prince Joshua Ngojo., AI/ML researcher and CS student from the Philippines.",
+  icons: {
+    icon: "/favicon.svg",
+    apple: "/favicon.svg"
+  }
 };
 
 export default function RootLayout({ children }) {
