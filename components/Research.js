@@ -30,26 +30,36 @@ export default function Research() {
           </div>
 
           <div className="panel">
-            <h3>Current research</h3>
-            <p style={{ marginBottom: '24px' }}>
-              <strong>Filipino Sign Language Recognition</strong> utilizing <em>MediaPipe Holistic</em> and a <em>Transformer model</em>.
-            </p>
-
             <h3>Education</h3>
 
             <div className="edu-item">
               <strong>BS Computer Science</strong>
-              <span>Cor Jesu College &bull; <em>3rd Year</em></span>
+              <div style={{ color: 'var(--muted)', fontSize: '14px', marginTop: '4px', marginBottom: '12px' }}>
+                Cor Jesu College &bull; <em>3rd Year</em>
+              </div>
+              <p style={{ margin: '0 0 8px 0', fontSize: '14px' }}>
+                Specialized coursework in data science, machine learning, and AI systems. Active participation in research projects focused on real-world applications and ethical considerations in technology.
+              </p>
             </div>
 
             <div className="edu-item">
               <strong>STEM Strand</strong>
-              <span>University of Mindanao, Digos &bull; <em>SHS GPA: 4.00 / 4.00</em></span>
+              <div style={{ color: 'var(--muted)', fontSize: '14px', marginTop: '4px', marginBottom: '12px' }}>
+                University of Mindanao, Digos &bull; <em>SHS GPA: 4.00 / 4.00</em>
+              </div>
+              <p style={{ margin: '0 0 8px 0', fontSize: '14px' }}>
+                Completed senior high school with distinction in STEM track. Developed foundational knowledge in advanced mathematics, physics, and chemistry with emphasis on research methodologies and scientific inquiry.
+              </p>
             </div>
 
             <div className="edu-item">
               <strong>SPFL – Mandarin</strong>
-              <span>Digos City National High School &bull; <em>With Honors</em></span>
+              <div style={{ color: 'var(--muted)', fontSize: '14px', marginTop: '4px', marginBottom: '12px' }}>
+                Digos City National High School &bull; <em>With Honors</em>
+              </div>
+              <p style={{ margin: '0 0 8px 0', fontSize: '14px' }}>
+                Graduated with honors. Studied Mandarin Chinese alongside core academic subjects. Strong foundation in language learning and cultural understanding.
+              </p>
             </div>
           </div>
         </div>
