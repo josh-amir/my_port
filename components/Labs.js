@@ -34,11 +34,13 @@ const labsContent = [
 				description:
 					"A psychological thriller following Dr. Eli, a couples therapist with a sinister double life.",
 				link: "https://www.facebook.com/share/v/1BADyRURb3/",
+				poster: "/images/thesession.jpg",
 			},
 			{
 				title: "The Four-saken Truths",
 				description: "Short film project (in progress).",
 				link: null,
+				poster: "/images/forsakentruths.jpg",
 			},
 		],
 	},
@@ -57,29 +59,68 @@ export default function Labs() {
 				{labsContent.map((section) => (
 					<div className="card" key={section.category}>
 						<h3 className="card-title">{section.category}</h3>
-						<ul className="stacked-list">
-							{section.items.map((item) => (
-								<li className="stacked-item" key={item.title}>
-									<div className="item-head">
-										<span className="item-title">{item.title}</span>
-										{item.link ? (
-											<span className="item-meta">
-												<a
-													href={item.link}
-													target="_blank"
-													rel="noopener noreferrer"
-												>
-													View
-												</a>
-											</span>
-										) : (
-											<span className="item-meta">Coming soon</span>
+						{section.category === "Short films" ? (
+							<ul className="stacked-list">
+								{section.items.map((item) => (
+									<li className="stacked-item" key={item.title}>
+										{item.poster && (
+											<img
+												src={item.poster}
+												alt={item.title}
+												style={{
+													width: "100%",
+													borderRadius: "8px",
+													marginBottom: "12px",
+													aspectRatio: "2/3",
+													objectFit: "cover",
+												}}
+											/>
 										)}
-									</div>
-									<p>{item.description}</p>
-								</li>
-							))}
-						</ul>
+										<div className="item-head">
+											<span className="item-title">{item.title}</span>
+											{item.link ? (
+												<span className="item-meta">
+													<a
+														href={item.link}
+														target="_blank"
+														rel="noopener noreferrer"
+													>
+														View
+													</a>
+												</span>
+											) : (
+												<span className="item-meta">Coming soon</span>
+											)}
+										</div>
+										<p>{item.description}</p>
+									</li>
+								))}
+							</ul>
+						) : (
+							<ul className="stacked-list">
+								{section.items.map((item) => (
+									<li className="stacked-item" key={item.title}>
+										<div className="item-head">
+											<span className="item-title">{item.title}</span>
+											{item.link ? (
+												<span className="item-meta">
+													<a
+														href={item.link}
+														target="_blank"
+														rel="noopener noreferrer"
+													>
+														View
+													</a>
+												</span>
+											) : (
+												<span className="item-meta">Coming soon</span>
+											)}
+										</div>
+										<p>{item.description}</p>
+									</li>
+								))}
+							</ul>
+						)}
 					</div>
 				))}
 			</div>
