@@ -13,55 +13,44 @@ export default function Research() {
         <div className="split-grid">
           <div>
             <p>
-              I'm deeply interested in the intersection of technology, ethics,
-              policy, and philosophy and to integrate technology with humanities and law.
+              I explore the intersection of <strong>technology, ethics, policy, and philosophy</strong>, aiming to bridge the gap between AI, the humanities, and law.
             </p>
 
             <p>
-              My thesis explores Filipino Sign Language Recognition with a core question:
-              How do we design AI systems that are fair, transparent, and beneficial to communities?
+              My thesis focuses on <strong>Filipino Sign Language (FSL) Recognition</strong>. It asks a core question: <em>How do we design AI systems that are fair, transparent, and beneficial to local communities?</em>
             </p>
 
             <p>
-              I'm passionate about building rigorous AI research that tackles
-              real-world challenges in the Philippines while contributing to
-              global conversations on equitable, human-centered technology.
+              My goal is to build rigorous research that solves <strong>real-world challenges in the Philippines</strong> while advancing global conversations on <em>equitable, human-centered technology</em>.
             </p>
 
             <p>
-              Outside of research, I enjoy reading philosophy and policy papers,
-              writing about tech and society, podcasting, and debating ideas.
+              Outside of research, I read policy papers, write about tech and society, podcast, and debate ideas.
             </p>
           </div>
 
           <div className="panel">
+            <h3>Current research</h3>
+            <p style={{ marginBottom: '24px' }}>
+              <strong>Filipino Sign Language Recognition</strong> utilizing <em>MediaPipe Holistic</em> and a <em>Transformer model</em>.
+            </p>
+
             <h3>Education</h3>
 
-            <p className="edu-item">
-              <strong>Cor Jesu College</strong><br />
-              BS Computer Science<br />
-              3rd Year
-            </p>
+            <div className="edu-item">
+              <strong>BS Computer Science</strong>
+              <span>Cor Jesu College &bull; <em>3rd Year</em></span>
+            </div>
 
-            <p className="edu-item">
-              <strong>University of Mindanao – Digos College</strong><br />
-              Science, Technology, Engineering, and Mathematics (STEM)<br />
-              Senior High School<br />
-              SHS GPA: 4.00 / 4.00
-            </p>
+            <div className="edu-item">
+              <strong>STEM Strand</strong>
+              <span>University of Mindanao, Digos &bull; <em>SHS GPA: 4.00 / 4.00</em></span>
+            </div>
 
-            <p className="edu-item">
-              <strong>Digos City National High School</strong><br />
-              Special Program in Foreign Language – Mandarin<br />
-              Junior High School<br />
-              With Honors
-            </p>
-
-            <h3>Current research</h3>
-            <p>
-              Filipino Sign Language Recognition using MediaPipe Holistic and a
-              transformer model.
-            </p>
+            <div className="edu-item">
+              <strong>SPFL – Mandarin</strong>
+              <span>Digos City National High School &bull; <em>With Honors</em></span>
+            </div>
           </div>
         </div>
       </div>
