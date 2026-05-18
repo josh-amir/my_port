@@ -1,18 +1,6 @@
-import { Inter, EB_Garamond } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
-  display: "swap"
-});
-
-const garamond = EB_Garamond({
-  subsets: ["latin"],
-  variable: "--font-serif",
-  display: "swap",
-  weight: ["400", "500", "600", "700", "800"]
-});
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export const metadata = {
   title: "Prince Joshua Ngojo. | AI/ML Researcher",
@@ -29,11 +17,11 @@ export default function RootLayout({ children }) {
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
       </head>
-      <body className={`${inter.variable} ${garamond.variable} bg-white font-sans text-gray-900 antialiased`}>
-        {children}
+      <body className="page-shell">
+        <Navbar />
+        <div className="page-body">{children}</div>
+        <Footer />
       </body>
     </html>
   );
 }
-
-

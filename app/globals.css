@@ -2,125 +2,587 @@
 @tailwind components;
 @tailwind utilities;
 
-@keyframes smoothScaleIn {
-  from {
-    transform: scale(1);
-    opacity: 1;
-  }
-  to {
-    transform: scale(1.05);
-    opacity: 1;
-  }
-}
-
-@keyframes smoothFade {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0.8;
-  }
-}
-
 :root {
   color-scheme: light;
-  --background: #ffffff;
-  --foreground: #000000;
-  --mit-red: #A31F34;
-  --mit-gray: #3D3D3D;
-  --border: #000000;
+
+  /* Google Workspace Backgrounds */
+  --bg: #F8F9FA;
+  --card-bg: #FFFFFF;
+
+  /* Google Typography Colors (No pure black) */
+  --text: #202124;
+  --muted: #5F6368;
+  --faint: #80868B;
+
+  /* The Google Palette */
+  --google-blue: #1A73E8;
+  --google-blue-hover: #174EA6;
+  --google-blue-bg: #E8F0FE;
+  --google-red: #EA4335;
+  --google-yellow: #FBBC04;
+  --google-green: #34A853;
+
+  /* Theme Mapping */
+  --accent: var(--google-blue);
+  --accent-warm: var(--google-red);
+  --border: #DADCE0; /* Official Google border color */
+  --line: #E8EAED;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  @apply bg-background text-foreground font-sans;
-  font-weight: 400;
-  letter-spacing: 0.3px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  /* Prioritize Google Sans and Roboto */
+  font-family: "Google Sans", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
 }
 
 a {
-  @apply transition-colors duration-200;
+  color: var(--accent);
   text-decoration: none;
-  border-bottom: 2px solid currentColor;
-  padding-bottom: 2px;
+  transition: all 0.2s ease;
 }
 
-a:hover {
-  opacity: 0.85;
-}
+a:hover { color: var(--google-blue-hover); text-decoration: underline; }
 
-/* MIT Typography - Bold, clean, functional */
-h1, h2, h3, h4, h5, h6 {
-  font-weight: 700;
-  letter-spacing: -0.5px;
-}
-
-.section-container {
-  @apply min-h-screen w-full flex items-center justify-center py-12 md:py-20;
-  border-bottom: 2px solid #000000;
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-inline: clamp(16px, 4vw, 28px);
 }
 
 .section-content {
-  @apply max-w-5xl mx-auto px-4 md:px-6 w-full;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-inline: clamp(16px, 4vw, 28px);
+  padding-block: clamp(40px, 6vw, 64px) clamp(48px, 8vw, 80px);
 }
 
-/* MIT Style Cards */
-.mit-card {
-  @apply p-6 md:p-8;
-  border: 2px solid #000000;
-  background: #ffffff;
+.section {
+  margin-top: 0;
+  padding: 0;
+  background: transparent;
+  border: none;
+  border-radius: 0;
 }
 
-.mit-card:hover {
-  border-width: 2px;
-  box-shadow: 0 8px 16px rgba(163, 31, 52, 0.08);
-  transition: all 0.2s ease-in-out;
+.section + .section {
+  margin-top: clamp(36px, 5vw, 52px);
 }
 
-/* MIT Buttons */
-.btn-mit {
-  @apply px-6 py-3 border-2 border-black font-bold text-black;
-  background: #ffffff;
-  letter-spacing: 0.5px;
+.section-header {
+  margin-bottom: clamp(16px, 2.5vw, 22px);
+}
+
+/* Kicker using Google Red for a pop of brand color */
+.section-kicker {
   text-transform: uppercase;
+  letter-spacing: 0.12em;
   font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--google-red);
+  display: block;
 }
 
-.btn-mit:hover {
-  @apply bg-black text-white;
+.section-lead {
+  color: var(--muted);
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 55ch;
 }
 
-.btn-mit-solid {
-  @apply px-6 py-3 border-2 font-bold text-white;
-  background: var(--mit-red);
-  border-color: var(--mit-red);
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+h1, h2, h3 {
+  line-height: 1.2;
+  font-weight: 500; /* Google uses lighter weights for large headers */
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+h1 { font-size: clamp(32px, 4.5vw, 44px); font-weight: 400; }
+h2 { font-size: clamp(22px, 3vw, 28px); margin-bottom: 4px; }
+h3 { font-size: 18px; font-weight: 500; }
+
+p { margin: 0 0 10px 0; max-width: 68ch; }
+p:last-child { margin-bottom: 0; }
+
+ul { margin: 0 0 10px 0; padding-left: 1.1rem; }
+li { margin: 0 0 4px 0; }
+
+/* Flat white header, classic Google style */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  border-bottom: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.98);
+}
+
+.header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.header-brand {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.brand { color: var(--text); text-decoration: none; font-weight: 500; letter-spacing: -0.01em; }
+.brand:hover { color: var(--accent); text-decoration: none; }
+
+.brand-secondary {
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.nav-inline {
+  list-style: none;
+  display: flex;
+  gap: 4px;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--muted);
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 4px; /* Material 2 slight rounding */
+  transition: all 0.2s ease;
+}
+
+/* Classic Google light-gray hover */
+.nav-link:hover {
+  color: var(--text);
+  background: #F1F3F4;
+  text-decoration: none;
+}
+
+.hero {
+  display: grid;
+  gap: 16px;
+  padding-block: clamp(24px, 4vw, 36px) clamp(8px, 2vw, 16px);
+}
+
+.hero-header {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: var(--line);
+  flex-shrink: 0;
+  border: 1px solid var(--border);
+}
+
+.hero-title {
+  font-size: clamp(36px, 5vw, 48px);
+  font-weight: 400;
+  margin-bottom: 4px;
+  letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+  margin: 0;
+  color: var(--google-blue);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.hero-lead {
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 62ch;
+  font-weight: 400;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+/* Material Design Pill Buttons */
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 24px;
+  border-radius: 24px; /* Google pill shape */
+  border: none;
+  background: var(--google-blue);
+  color: #ffffff;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  letter-spacing: 0.01em;
+}
+
+.button:hover {
+  background: var(--google-blue-hover);
+  box-shadow: 0 1px 3px 0 rgba(60,64,67,0.3), 0 4px 8px 3px rgba(60,64,67,0.15); /* Authentic Material Elevation */
+  text-decoration: none;
+}
+
+.button-secondary {
+  background: var(--card-bg);
+  color: var(--google-blue);
+  border: 1px solid var(--border);
+}
+
+.button-secondary:hover {
+  background: var(--google-blue-bg);
+  color: var(--google-blue-hover);
+  border-color: var(--google-blue-bg);
+  box-shadow: none;
+}
+
+.button-ghost {
+  background: transparent;
+  color: var(--google-blue);
+  border-color: transparent;
+  padding-inline: 16px;
+}
+
+.button-ghost:hover {
+  background: var(--google-blue-bg);
+  color: var(--google-blue-hover);
+  text-decoration: none;
+}
+
+.link-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+/* Soft, light-gray Google icon buttons */
+.icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  color: var(--muted);
+  background: transparent;
+  transition: all 0.2s ease;
+}
+
+.icon-link:hover {
+  color: var(--text);
+  background: #F1F3F4;
+}
+
+.split-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: clamp(28px, 4vw, 48px);
+  align-items: start;
+}
+
+@media (max-width: 700px) {
+  .split-grid { grid-template-columns: 1fr; }
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+/* Material Design standard cards */
+.card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px;
+  background: var(--card-bg);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 1px 3px 0 rgba(60,64,67,0.3), 0 4px 8px 3px rgba(60,64,67,0.15); /* Google Elevation */
+  border-color: transparent;
+}
+
+.card-title { font-size: 16px; margin-bottom: 2px; font-weight: 500; color: var(--text); }
+.card-meta { font-size: 14px; color: var(--muted); margin-bottom: 4px; font-weight: 400;}
+.card-links { display: flex; flex-wrap: wrap; gap: 8px; font-size: 14px; }
+
+.panel {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 24px;
+  background: var(--card-bg);
+}
+
+.panel h3 {
+  font-size: 16px;
+  color: var(--text);
+  font-weight: 500;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border);
+}
+
+.stacked-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 16px;
+}
+
+.stacked-item {
+  border-bottom: 1px solid var(--line);
+  padding-bottom: 16px;
+}
+
+.stacked-item:last-child { border-bottom: none; padding-bottom: 0; }
+
+.item-head { display: flex; flex-direction: column; gap: 2px; }
+.item-title { font-weight: 500; font-size: 16px; }
+.item-meta { color: var(--muted); font-size: 14px; font-weight: 400; }
+
+.tag-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* Google Workspace light blue tags */
+.tag {
+  border: none;
+  border-radius: 4px;
+  padding: 4px 8px;
   font-size: 13px;
+  background: var(--google-blue-bg);
+  font-weight: 500;
+  color: var(--google-blue-hover);
+  letter-spacing: 0.01em;
+  transition: all 0.2s ease;
 }
 
-.btn-mit-solid:hover {
-  @apply bg-black;
-  border-color: #000000;
+.tag:hover {
+  background: #D2E3FC; /* Slightly darker blue tint */
 }
 
-/* MIT Accent */
-.mit-accent {
-  color: var(--mit-red);
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 32px 0 40px 0;
+  color: var(--muted);
+  background: var(--bg);
 }
 
-.mit-border-left {
-  border-left: 4px solid var(--mit-red);
+.site-footer p { margin: 0; font-size: 14px; font-weight: 400; }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
 }
 
-.mit-border-bottom {
-  border-bottom: 3px solid var(--mit-red);
+@media (max-width: 600px) {
+  .contact-grid { grid-template-columns: 1fr; gap: 20px; }
 }
 
+.contact-card {
+  padding: 0;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
 
+.contact-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--muted);
+}
 
+.contact-link {
+  color: var(--google-blue);
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
 
+.contact-link:hover { color: var(--google-blue-hover); text-decoration: underline; }
+
+.social-links { display: flex; gap: 8px; flex-wrap: wrap; }
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  color: var(--muted);
+  font-size: 20px;
+  background: transparent;
+  transition: all 0.2s ease;
+}
+
+.social-icon:hover {
+  color: var(--text);
+  background: #F1F3F4;
+}
+
+.projects-list { display: grid; gap: 16px; }
+
+.project-item {
+  padding: 24px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card-bg);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.project-item:hover {
+  box-shadow: 0 1px 3px 0 rgba(60,64,67,0.3), 0 4px 8px 3px rgba(60,64,67,0.15);
+  border-color: transparent;
+}
+
+.project-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.project-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+  color: var(--text);
+}
+
+.project-period {
+  font-size: 13px;
+  color: var(--muted);
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.project-tech {
+  font-size: 14px;
+  color: var(--google-green); /* Using Google Green for tech stacks */
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.project-description {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+  max-width: 72ch;
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--google-blue);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.project-link:hover {
+  color: var(--google-blue-hover);
+  text-decoration: underline;
+}
+
+.edu-item {
+  margin-bottom: 20px;
+  line-height: 1.55;
+}
+
+.edu-item:last-child { margin-bottom: 0; }
+
+.edu-item strong {
+  display: block;
+  margin-bottom: 2px;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--text);
+}
+
+.edu-item span,
+.edu-item em {
+  font-size: 15px;
+  color: var(--muted);
+  font-style: normal;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .header-row { padding: 12px 0; }
+  .hero-title { font-size: 32px; }
+  .hero-avatar { width: 64px; height: 64px; }
+  .hero-header { grid-template-columns: 1fr; gap: 16px; }
+  .section-content { padding-block: 32px 48px; padding-inline: 16px; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .project-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 4px;
+  }
+}

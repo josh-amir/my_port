@@ -1,5 +1,3 @@
-"use client";
-
 const researchSkills = [
   "Machine Learning",
   "Transfer Learning",
@@ -39,37 +37,53 @@ const leadershipExperience = [
 export default function Skills() {
   return (
     <div>
-      <h2 className="text-5xl md:text-7xl font-black mb-16 md:mb-20 text-black tracking-tighter border-b-4 border-[#A31F34] pb-6">SKILLS</h2>
-      <div className="grid gap-12 md:gap-16 grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-        <div className="border-l-8 border-[#A31F34] pl-6">
-          <h3 className="font-black text-2xl text-black mb-8 tracking-wider uppercase border-b-4 border-[#A31F34] pb-3">Research & AI</h3>
-          <ul className="space-y-3 text-base font-bold text-black">
+      <div className="section-header">
+        <p className="section-kicker">Competencies</p>
+        <h2>Skills</h2>
+        <p className="section-lead">Research, engineering, and leadership.</p>
+      </div>
+
+      <div className="card-grid">
+        <div className="card">
+          <h3 className="card-title">Research & AI</h3>
+          <ul className="tag-list">
             {researchSkills.map((skill) => (
-              <li key={skill}>{skill}</li>
+              <li className="tag" key={skill}>
+                {skill}
+              </li>
             ))}
           </ul>
         </div>
-        <div className="border-l-8 border-[#A31F34] pl-6">
-          <h3 className="font-black text-2xl text-black mb-8 tracking-wider uppercase border-b-4 border-[#A31F34] pb-3">Engineering</h3>
-          <ul className="space-y-3 text-base font-bold text-black">
+
+        <div className="card">
+          <h3 className="card-title">Engineering</h3>
+          <ul className="tag-list">
             {engineeringSkills.map((skill) => (
-              <li key={skill}>{skill}</li>
+              <li className="tag" key={skill}>
+                {skill}
+              </li>
             ))}
           </ul>
         </div>
-        <div className="border-l-8 border-[#A31F34] pl-6">
-          <h3 className="font-black text-2xl text-black mb-8 tracking-wider uppercase border-b-4 border-[#A31F34] pb-3">Volunteering</h3>
-          <ul className="space-y-3 text-base font-bold text-black">
+
+        <div className="card">
+          <h3 className="card-title">Volunteering</h3>
+          <ul className="tag-list">
             {volunteeringExperience.map((experience) => (
-              <li key={experience}>{experience}</li>
+              <li className="tag" key={experience}>
+                {experience}
+              </li>
             ))}
           </ul>
         </div>
-        <div className="border-l-8 border-[#A31F34] pl-6">
-          <h3 className="font-black text-2xl text-black mb-8 tracking-wider uppercase border-b-4 border-[#A31F34] pb-3">Leadership</h3>
-          <ul className="space-y-3 text-base font-bold text-black">
+
+        <div className="card">
+          <h3 className="card-title">Leadership</h3>
+          <ul className="tag-list">
             {leadershipExperience.map((experience) => (
-              <li key={experience}>{experience}</li>
+              <li className="tag" key={experience}>
+                {experience}
+              </li>
             ))}
           </ul>
         </div>
@@ -77,4 +91,3 @@ export default function Skills() {
     </div>
   );
 }
-

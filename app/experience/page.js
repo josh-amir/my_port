@@ -1,11 +1,12 @@
-import Research from "../../components/Research";
+import Experience from "../../components/Experience";
 
-export default function AboutPage() {
+export default function ExperiencePage() {
   return (
     <main className="section-content">
       <section className="section">
-        <Research />
+        <Experience />
       </section>
     </main>
   );
 }
+

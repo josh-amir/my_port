@@ -1,5 +1,3 @@
-"use client";
-
 const awards = [
   {
     title: "Dean's List",
@@ -30,23 +28,25 @@ const awards = [
 export default function Awards() {
   return (
     <div>
-      <h2 className="text-3xl md:text-4xl font-serif font-light mb-8 md:mb-10 text-gray-900">Awards & Recognition</h2>
-      <div className="grid gap-6 md:gap-8">
-        {awards.map((award, idx) => (
-          <div key={idx} className="p-4 md:p-6 border border-gray-200 rounded-lg hover:border-blue-300 transition-colors">
-            <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2 md:gap-4 mb-2">
-              <div>
-                <h3 className="text-base md:text-lg font-serif font-light text-gray-900">
-                  <strong className="text-blue-600">{award.title}</strong>
-                </h3>
-                <p className="text-sm md:text-base font-serif text-gray-600">{award.issuer}</p>
-              </div>
-              <p className="text-xs md:text-sm font-serif text-gray-500 whitespace-nowrap">{award.year}</p>
-            </div>
-            <p className="text-sm md:text-base font-serif text-gray-700">{award.description}</p>
-          </div>
-        ))}
+      <div className="section-header">
+        <p className="section-kicker">Recognition</p>
+        <h2>Awards</h2>
+        <p className="section-lead">Academic and professional highlights.</p>
       </div>
+
+      <ul className="stacked-list">
+        {awards.map((award) => (
+          <li className="stacked-item" key={`${award.title}-${award.year}`}>
+            <div className="item-head">
+              <span className="item-title">{award.title}</span>
+              <span className="item-meta">
+                {award.issuer} · {award.year}
+              </span>
+            </div>
+            <p>{award.description}</p>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

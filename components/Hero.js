@@ -1,84 +1,71 @@
-"use client";
-
-import { useEffect, useRef } from "react";
-import Typed from "typed.js";
+import Link from "next/link";
+import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Hero() {
-  const typeRef = useRef(null);
-
-  useEffect(() => {
-    const typed = new Typed(typeRef.current, {
-      strings: [
-        "AI & ML Researcher.",
-        "CS Student.",
-        "Data Scientist.",
-        "Civic Tech Builder.",
-      ],
-      typeSpeed: 50,
-      backSpeed: 50,
-      backDelay: 2500,
-      loop: true,
-      showCursor: false,
-    });
-
-    return () => {
-      typed.destroy();
-    };
-  }, []);
-
   return (
-    <div className="pt-28">
-      <div className="grid gap-12 md:gap-20 md:grid-cols-3 md:items-start">
-        <div className="md:col-span-2">
-          <h1 className="text-6xl md:text-8xl font-black mb-6 md:mb-8 text-black leading-tight tracking-tighter">
-            PRINCE<br className="hidden md:block" /> <span className="text-[#A31F34] block md:inline">JOSHUA</span><br className="md:hidden" /> NGOJO
-          </h1>
-          <div className="border-l-8 border-[#A31F34] pl-6 md:pl-8 mb-8 md:mb-12 py-2">
-            <p className="text-3xl md:text-4xl font-black text-black mb-4 tracking-tighter">
-              <span ref={typeRef} />
-            </p>
-          </div>
-          <p className="text-lg md:text-xl font-bold text-black leading-relaxed mb-6 max-w-lg">
-            I'm an <span className="text-[#A31F34] font-black border-b-4 border-[#A31F34]">AI/ML researcher</span> and <span className="text-[#A31F34] font-black border-b-4 border-[#A31F34]">CS student</span> building ethical, human-centered technology in <span className="text-[#A31F34] font-black border-b-4 border-[#A31F34]">Davao, Philippines</span>.
+    <div className="hero">
+      <div className="hero-header">
+        <img
+          className="hero-avatar"
+          src="/images/josh_new.png"
+          alt="Portrait of Prince Joshua Ngojo"
+        />
+
+        <div>
+          <p className="section-kicker">Data Science</p>
+          <h1 className="hero-title">Prince Joshua Ngojo</h1>
+          <p className="hero-subtitle">
+            Third Year Computer Science Student.
           </p>
-          <p className="text-base md:text-lg font-bold text-black leading-relaxed mb-10 max-w-lg">
-            Explore my work below or download my CV.
-          </p>
-          <div className="flex gap-3 md:gap-6 flex-wrap items-center">
-            <a
-              href="https://github.com/josh-amir"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-4 md:px-8 py-3 md:py-4 border-4 border-[#A31F34] bg-[#A31F34] text-white font-black text-xs md:text-sm tracking-widest uppercase transition-all duration-500 ease-in-out hover:bg-black hover:border-black hover:shadow-xl"
-            >
-              GITHUB
-            </a>
-            <a
-              href="/cv.pdf"
-              download
-              className="px-4 md:px-8 py-3 md:py-4 border-4 border-black text-black font-black text-xs md:text-sm tracking-widest uppercase transition-all duration-500 ease-in-out hover:bg-black hover:text-white hover:shadow-xl"
-            >
-              CV
-            </a>
-          </div>
         </div>
-        <div className="flex justify-center md:justify-end">
-          <div className="border-4 border-[#A31F34] p-1">
-            <div className="border-2 border-black">
-              <img
-                src="/images/josh.png"
-                alt="Prince Joshua Ngojo"
-                className="w-48 h-48 md:w-64 md:h-64 object-cover"
-              />
-            </div>
-          </div>
-        </div>
+      </div>
+
+      <p className="hero-lead">
+        Hi, I'm Josh, a passionate computer science student focused on data science, machine learning, and
+        AI research. I love building projects that solve real-world problems and exploring the ethical implications
+        of technology. I'm currently working on my thesis on Filipino Sign Language recognition using Media Pipe Holistic and
+        transformer model.
+      </p>
+
+      <div className="hero-actions">
+        <Link className="button" href="/projects">
+          View projects
+        </Link>
+        <Link className="button button-secondary" href="/about">
+          Research
+        </Link>
+        <a
+          className="button button-ghost"
+          href="/Josh_CV3.pdf"
+          download="Josh_CV3.pdf"
+        >
+          CV
+        </a>
+      </div>
+
+      <div className="link-row">
+        <a
+          className="icon-link"
+          href="mailto:princengojo@g.cjc.edu.ph"
+          title="Email"
+        >
+          <FaEnvelope />
+        </a>
+        <a
+          className="icon-link"
+          href="https://github.com/josh-amir"
+          title="GitHub"
+        >
+          <FaGithub />
+        </a>
+        <a
+          className="icon-link"
+          href="https://www.linkedin.com/in/prince-joshua-ngojo-8737b2314/"
+          title="LinkedIn"
+        >
+          <FaLinkedin />
+        </a>
       </div>
     </div>
   );
 }
-
-
-
-
-

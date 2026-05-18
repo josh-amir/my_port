@@ -1,42 +1,69 @@
-"use client";
-
 export default function Research() {
   return (
-    <div>
-      <div id="research" />
-      <div className="grid gap-12 md:gap-16 grid-cols-1 md:grid-cols-2">
-        <div className="border-l-8 border-[#A31F34] pl-8">
-          <h2 className="text-6xl md:text-7xl font-black mb-10 text-black tracking-tighter border-b-4 border-[#A31F34] pb-6">ABOUT</h2>
-          <div className="space-y-6 md:space-y-8 text-lg md:text-lg font-bold text-black leading-relaxed">
+      <div>
+        <div className="section-header">
+          <p className="section-kicker">Profile</p>
+          <h2>Research profile</h2>
+          <p className="section-lead">
+            Focused on the intersection of AI, ethics, policy, and human-centered
+            systems.
+          </p>
+        </div>
+
+        <div className="split-grid">
+          <div>
             <p>
-              I'm deeply interested in the intersection of <span className="text-[#A31F34] font-black border-b-4 border-[#A31F34]">technology</span>, <span className="text-[#A31F34] font-black border-b-4 border-[#A31F34]">ethics</span>, <span className="text-[#A31F34] font-black border-b-4 border-[#A31F34]">law</span>, and <span className="text-[#A31F34] font-black border-b-4 border-[#A31F34]">philosophy</span>. My work focuses on AI ethics, responsible AI design, and building transparent, trustworthy systems.
+              I'm deeply interested in the intersection of technology, ethics,
+              policy, and philosophy and to integrate technology with humanities and law.
             </p>
+
             <p>
-              My thesis explores <span className="text-[#A31F34] font-black border-b-4 border-[#A31F34]">indoor positioning systems</span> using <span className="text-[#A31F34] font-black border-b-4 border-[#A31F34]">transfer learning</span>. How do we design AI that's fair? How do we create digital governance tools that empower?
+              My thesis explores Filipino Sign Language Recognition with a core question:
+              How do we design AI systems that are fair, transparent, and beneficial to communities?
             </p>
+
             <p>
-              My passion is building <span className="text-[#A31F34] font-black border-b-4 border-[#A31F34]">rigorous AI research</span> that tackles real challenges in the <span className="text-[#A31F34] font-black border-b-4 border-[#A31F34]">Philippines</span> while contributing to global conversations on equitable technology.
+              I'm passionate about building rigorous AI research that tackles
+              real-world challenges in the Philippines while contributing to
+              global conversations on equitable, human-centered technology.
             </p>
+
             <p>
-              Outside of research, I love reading philosophy and policy, writing about tech and society, podcasting, and debating ideas.
+              Outside of research, I enjoy reading philosophy and policy papers,
+              writing about tech and society, podcasting, and debating ideas.
             </p>
           </div>
-        </div>
-        <div className="border-l-8 border-[#A31F34] pl-8 pt-8 md:pt-0">
-          <h3 className="font-black text-5xl md:text-6xl mb-10 text-black tracking-tighter border-b-4 border-[#A31F34] pb-6">EDUCATION</h3>
-          <div className="space-y-8">
-            <div>
-              <p className="text-2xl md:text-3xl font-black text-black mb-3">BS COMPUTER SCIENCE</p>
-              <p className="text-xl font-black text-[#A31F34]">3RD YEAR</p>
-            </div>
-            <div className="border-t-4 border-[#A31F34] pt-8">
-              <p className="text-3xl md:text-4xl font-black text-[#A31F34] tracking-tighter">DAVAO, PHILIPPINES</p>
-            </div>
+
+          <div className="panel">
+            <h3>Education</h3>
+
+            <p className="edu-item">
+              <strong>Cor Jesu College</strong><br />
+              BS Computer Science<br />
+              3rd Year
+            </p>
+
+            <p className="edu-item">
+              <strong>University of Mindanao – Digos College</strong><br />
+              Science, Technology, Engineering, and Mathematics (STEM)<br />
+              Senior High School<br />
+              SHS GPA: 4.00 / 4.00
+            </p>
+
+            <p className="edu-item">
+              <strong>Digos City National High School</strong><br />
+              Special Program in Foreign Language – Mandarin<br />
+              Junior High School<br />
+              With Honors
+            </p>
+
+            <h3>Current research</h3>
+            <p>
+              Filipino Sign Language Recognition using MediaPipe Holistic and a
+              transformer model.
+            </p>
           </div>
         </div>
       </div>
-    </div>
   );
 }
-
-
