@@ -13,7 +13,12 @@ const engineeringSkills = [
   "Kotlin",
   "Next.js",
   "SQL & Data Modeling",
-  "API Design"
+  "API Design",
+  "Java",
+  "HTML",
+  "CSS",
+  "JS"
+
 ];
 
 const volunteeringExperience = [

@@ -5,18 +5,22 @@ export default function Hero() {
   return (
     <div className="hero">
       <div className="hero-header">
-        <img
-          className="hero-avatar"
-          src="/images/josh_new.png"
-          alt="Portrait of Prince Joshua Ngojo"
-        />
+        <div className="hero-avatar-container">
+          <div className="avatar-glow"></div>
+          <img
+            className="hero-avatar"
+            src="/images/josh_new.png"
+            alt="Portrait of Prince Joshua Ngojo"
+          />
+        </div>
 
-        <div>
-          <p className="section-kicker">Data Science</p>
+        <div className="hero-text-content">
+          <p className="section-kicker">Data Science & AI</p>
           <h1 className="hero-title">Prince Joshua Ngojo</h1>
           <p className="hero-subtitle">
-            Third Year Computer Science Student.
+            Third Year Computer Science Student
           </p>
+
         </div>
       </div>
 
@@ -28,7 +32,7 @@ export default function Hero() {
       </p>
 
       <div className="hero-actions">
-        <Link className="button" href="/projects">
+        <Link className="button button-primary" href="/projects">
           View projects
         </Link>
         <Link className="button button-secondary" href="/about">

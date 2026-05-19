@@ -67,12 +67,14 @@ export default function Labs() {
 											<img
 												src={item.poster}
 												alt={item.title}
+												className="image-hover"
 												style={{
 													width: "100%",
 													borderRadius: "8px",
 													marginBottom: "12px",
 													aspectRatio: "2/3",
 													objectFit: "cover",
+													display: "block",
 												}}
 											/>
 										)}

@@ -1,6 +1,7 @@
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import SplashScreen from "../components/SplashScreen";
 
 export const metadata = {
   title: "Prince Joshua Ngojo. | AI/ML Researcher",
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
       </head>
       <body className="page-shell">
+        <SplashScreen />
         <Navbar />
         <div className="page-body">{children}</div>
         <Footer />

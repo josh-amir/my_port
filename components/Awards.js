@@ -1,28 +1,23 @@
 const awards = [
+
   {
-    title: "Dean's List",
-    issuer: "University of Davao",
-    year: "2022 - Present",
-    description: "Recognized for academic excellence with GPA above 3.8"
-  },
-  {
-    title: "Best Research Paper",
-    issuer: "CS Department Symposium",
+    title: "Champion- Short Film for The Session",
+    issuer: "CJC Intramurals 2024 Short Film Competition",
     year: "2024",
-    description: "Awarded for research on transfer learning in indoor positioning systems"
+    description: "Won Champion award for 'The Session' - showcasing creative storytelling and production excellence"
   },
   {
-    title: "Google Cloud Skills Boost Certification",
-    issuer: "Google Cloud",
+    title: "Best Actor",
+    issuer: "SIP Short Film Festival",
     year: "2023",
-    description: "Completed advanced training in machine learning and cloud infrastructure"
+    description: "Won Best Actor award for standout performance in 'Four-Saken Truth'"
   },
   {
-    title: "AI/ML Hackathon Winner",
-    issuer: "TechPH 2023",
+    title: "Best Short Film",
+    issuer: "SIP Short Film Festival",
     year: "2023",
-    description: "Won 1st place for innovative AI solution addressing accessibility"
-  }
+    description: "Won Best Short Film award for 'Four-saken Truth' - a compelling narrative exploring complex human relationships"
+  },
 ];
 
 export default function Awards() {

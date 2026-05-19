@@ -11,6 +11,7 @@ const projects = [
 				href: "https://github.com/josh-amir",
 			},
 		],
+		featured: true,
 	},
 	{
 		title: "School Clinic Patient Management System",
@@ -19,6 +20,7 @@ const projects = [
 		description:
 			"Built a desktop application for the CJC Clinic to streamline medical record-keeping with a strong focus on usability. Designed a relational SQLite database schema to manage patient history and inventory more efficiently.",
 		links: [],
+		featured: true,
 	},
 	{
 		title: "Sinsilyo: Philippine Coin Identifier",
@@ -32,6 +34,7 @@ const projects = [
 				href: "https://github.com/josh-amir/sinsilyo",
 			},
 		],
+		featured: true,
 	},
 	{
 		title: "Hidden Secrets: Steganography Tool",
@@ -88,6 +91,30 @@ export default function Projects() {
 			<div className="projects-list">
 				{projects.map((project) => (
 					<article className="project-item" key={project.title}>
+						{project.featured && (
+							<div
+								style={{
+									width: "100%",
+									height: "240px",
+									borderRadius: "8px",
+									marginBottom: "16px",
+									background: "linear-gradient(135deg, #E8F0FE 0%, #F3F3F3 100%)",
+									display: "flex",
+									alignItems: "center",
+									justifyContent: "center",
+									color: "#5F6368",
+									fontSize: "14px",
+									fontWeight: "500",
+									overflow: "hidden",
+									cursor: "pointer",
+									transition: "all 0.3s cubic-bezier(0.2, 0, 0, 1)",
+								}}
+								className="image-hover"
+								title={project.title}
+							>
+								{project.title}
+							</div>
+						)}
 						<div className="project-header">
 							<h3 className="project-title">{project.title}</h3>
 							<span className="project-period">{project.period}</span>
