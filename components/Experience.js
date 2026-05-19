@@ -2,8 +2,8 @@ const experiences = [
   // first experience
   {
     role: "Deputy Academic Secretary",
-    organization: "College of Computer and Information Sciences",
-    period: "2025 - Present",
+    organization: "CJC - College of Computing and Information Sciences",
+    period: "2025 - Present" ,
     description:
       "Academic planning and coordination; organized seminars; supported departmental advocacy and student affairs.",
   },
