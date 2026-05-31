@@ -4,7 +4,8 @@ const researchSkills = [
   "Natural Language Processing",
   "AI Ethics & Responsible AI",
   "Data Analysis",
-  "Research Writing"
+  "Research Writing",
+  "Experiment Design"
 ];
 
 const engineeringSkills = [
@@ -15,27 +16,16 @@ const engineeringSkills = [
   "SQL & Data Modeling",
   "API Design",
   "Java",
-  "HTML",
-  "CSS",
-  "JS"
-
+  "JavaFX",
+  "HTML/CSS/JS"
 ];
 
-const volunteeringExperience = [
-  "Red Cross Youth Philippines",
-  "Disaster Risk Reduction",
-  "Community Outreach",
-  "Emergency Response",
-  "Health & Safety Education",
-  "Youth Leadership"
-];
-
-const leadershipExperience = [
-  "CCIS Deputy Academic Secretary",
-  "Academic Planning & Coordination",
-  "Student Leadership",
-  "Department Advocacy",
-  "Event Organization",
+const workflowSkills = [
+  "Project Planning",
+  "User-centered Design",
+  "Documentation",
+  "Team Collaboration",
+  "Mentoring & Support",
   "Stakeholder Communication"
 ];
 
@@ -72,22 +62,11 @@ export default function Skills() {
         </div>
 
         <div className="card">
-          <h3 className="card-title">Volunteering</h3>
+          <h3 className="card-title">Workflow & leadership</h3>
           <ul className="tag-list">
-            {volunteeringExperience.map((experience) => (
-              <li className="tag" key={experience}>
-                {experience}
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="card">
-          <h3 className="card-title">Leadership</h3>
-          <ul className="tag-list">
-            {leadershipExperience.map((experience) => (
-              <li className="tag" key={experience}>
-                {experience}
+            {workflowSkills.map((skill) => (
+              <li className="tag" key={skill}>
+                {skill}
               </li>
             ))}
           </ul>

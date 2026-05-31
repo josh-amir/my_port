@@ -3,8 +3,13 @@ const projects = [
 		title: "Filipino Sign Language Interpreter — CS Thesis",
 		period: "Jan 2026 – Present",
 		tech: "Python, MediaPipe, Pose Transformers",
+		role: "Researcher / ML Engineer",
 		description:
 			"Developing a real-time gesture recognition system to help bridge communication gaps for deaf learners in classroom settings. Exploring Pose Transformer architectures to improve recognition accuracy for dynamic sign language translation.",
+		outcomes: [
+			"Designed a pose-based pipeline for real-time inference.",
+			"Evaluating transformer variants for temporal accuracy and fairness.",
+		],
 		links: [
 			{
 				label: "GitHub",
@@ -17,8 +22,13 @@ const projects = [
 		title: "School Clinic Patient Management System",
 		period: "Jan 2026 – Present",
 		tech: "Java, JavaFX, SQLite",
+		role: "Full-stack developer",
 		description:
 			"Built a desktop application for the CJC Clinic to streamline medical record-keeping with a strong focus on usability. Designed a relational SQLite database schema to manage patient history and inventory more efficiently.",
+		outcomes: [
+			"Implemented a clean, task-focused UX for staff workflows.",
+			"Modeled patient and inventory data for reliable reporting.",
+		],
 		links: [],
 		featured: true,
 	},
@@ -26,8 +36,13 @@ const projects = [
 		title: "Sinsilyo: Philippine Coin Identifier",
 		period: "Jul 2025 – Dec 2025",
 		tech: "Kotlin, Jetpack Compose, CNN, TensorFlow Lite",
+		role: "Project manager / Lead front-end engineer",
 		description:
 			"Served as Project Manager and Lead Front-End Engineer for an accessibility-focused mobile application. Trained a convolutional neural network to identify Philippine coins and coordinated a five-member team to integrate the machine learning model into a seamless Android interface.",
+		outcomes: [
+			"Coordinated end-to-end delivery across a five-member team.",
+			"Integrated on-device inference into an accessible UI.",
+		],
 		links: [
 			{
 				label: "GitHub",
@@ -40,8 +55,13 @@ const projects = [
 		title: "Hidden Secrets: Steganography Tool",
 		period: "Oct 2025 – Dec 2025",
 		tech: "Python, HTML, CSS, JavaScript",
+		role: "Lead developer",
 		description:
 			"Led the implementation of Least Significant Bit (LSB) steganography to securely embed encrypted data within image files. Designed a modular software architecture for handling multiple image formats and encryption workflows while minimizing visible distortion.",
+		outcomes: [
+			"Built modular pipelines for encoding, decoding, and encryption.",
+			"Optimized for minimal visible distortion in outputs.",
+		],
 		links: [
 			{
 				label: "GitHub",
@@ -53,8 +73,13 @@ const projects = [
 		title: "Luksong Baka: Cultural Tech Revival",
 		period: "Aug 2025 – Oct 2025",
 		tech: "Unity, C#",
+		role: "Gameplay developer",
 		description:
 			"Developed a 3D simulation of the traditional Filipino game Luksong Baka to help preserve cultural heritage through interactive media. Built custom character controls, jump mechanics, and an adaptive difficulty system based on player performance.",
+		outcomes: [
+			"Implemented custom movement and jump mechanics.",
+			"Built adaptive difficulty logic for better engagement.",
+		],
 		links: [
 			{
 				label: "GitHub",
@@ -66,8 +91,13 @@ const projects = [
 		title: "Hashing Simulation Animation",
 		period: "Dec 2024 – Jan 2025",
 		tech: "HTML, CSS, JavaScript",
+		role: "Front-end developer",
 		description:
 			"Created an interactive web-based animation to visualize hashing processes for a Discrete Structures project. Designed dynamic demonstrations of hash functions and collision handling strategies to make core algorithmic concepts easier to understand.",
+		outcomes: [
+			"Built interactive visuals for hashing and collision handling.",
+			"Simplified complex concepts for classroom learning.",
+		],
 		links: [
 			{
 				label: "GitHub",
@@ -98,7 +128,8 @@ export default function Projects() {
 									height: "240px",
 									borderRadius: "8px",
 									marginBottom: "16px",
-									background: "linear-gradient(135deg, #E8F0FE 0%, #F3F3F3 100%)",
+									background:
+										"linear-gradient(135deg, #E8F0FE 0%, #F3F3F3 100%)",
 									display: "flex",
 									alignItems: "center",
 									justifyContent: "center",
@@ -121,7 +152,18 @@ export default function Projects() {
 						</div>
 
 						<p className="project-tech">{project.tech}</p>
+						{project.role && (
+							<p className="project-role">Role: {project.role}</p>
+						)}
 						<p className="project-description">{project.description}</p>
+
+						{project.outcomes?.length > 0 && (
+							<ul className="project-impact">
+								{project.outcomes.map((outcome) => (
+									<li key={outcome}>{outcome}</li>
+								))}
+							</ul>
+						)}
 
 						{project.links?.length > 0 && (
 							<div className="project-links">

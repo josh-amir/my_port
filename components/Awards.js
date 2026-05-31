@@ -1,22 +1,22 @@
 const awards = [
 
   {
-    title: "Champion- Short Film for The Session",
+    title: "Champion - Short Film for The Session",
     issuer: "CJC Intramurals 2024 Short Film Competition",
     year: "2024",
-    description: "Won Champion award for 'The Session' - showcasing creative storytelling and production excellence"
+    description: "Won Champion for 'The Session' for collaborative storytelling, production planning, and delivery under deadlines."
   },
   {
     title: "Best Actor",
     issuer: "SIP Short Film Festival",
     year: "2023",
-    description: "Won Best Actor award for standout performance in 'Four-Saken Truth'"
+    description: "Recognized for standout performance in 'Four-Saken Truth' with a focus on communication and presence."
   },
   {
     title: "Best Short Film",
     issuer: "SIP Short Film Festival",
     year: "2023",
-    description: "Won Best Short Film award for 'Four-saken Truth' - a compelling narrative exploring complex human relationships"
+    description: "Won Best Short Film award for 'Four-Saken Truth' for narrative clarity, team coordination, and creative direction."
   },
 ];
 
@@ -26,7 +26,7 @@ export default function Awards() {
       <div className="section-header">
         <p className="section-kicker">Recognition</p>
         <h2>Awards</h2>
-        <p className="section-lead">Academic and professional highlights.</p>
+        <p className="section-lead">Creative and leadership recognition.</p>
       </div>
 
       <ul className="stacked-list">

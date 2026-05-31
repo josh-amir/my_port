@@ -1,25 +1,25 @@
 import "./globals.css";
-import { Roboto, Inter } from "next/font/google";
+import { DM_Sans, Lora } from "next/font/google";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import SplashScreen from "../components/SplashScreen";
 
-const roboto = Roboto({
+const dmSans = DM_Sans({
   subsets: ["latin"],
-  weight: ["100", "300", "400", "500", "700", "900"],
-  variable: "--font-roboto",
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-sans",
   display: "swap",
 });
 
-const inter = Inter({
+const lora = Lora({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-display",
   display: "swap",
 });
 
 export const metadata = {
-  title: "Prince Joshua Ngojo. | AI/ML Researcher",
-  description: "Personal portfolio of Prince Joshua Ngojo., AI/ML researcher and CS student from the Philippines.",
+  title: "Prince Joshua Ngojo | Data Science & ML",
+  description: "Portfolio of Prince Joshua Ngojo, a computer science student focused on data science, machine learning, and human-centered AI. Open to internships and research collaborations.",
   icons: {
     icon: "/favicon.svg",
     apple: "/favicon.svg"
@@ -28,12 +28,18 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${roboto.variable} ${inter.variable}`}>
+    <html
+      lang="en"
+      suppressHydrationWarning
+      className={`${dmSans.variable} ${lora.variable}`}
+    >
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes"
+        />
       </head>
       <body className="page-shell">
-        <SplashScreen />
         <Navbar />
         <div className="page-body">{children}</div>
         <Footer />

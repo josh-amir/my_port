@@ -5,9 +5,9 @@ export default function Contact() {
     <div>
       <div className="section-header">
         <p className="section-kicker">Connect</p>
-        <h2>Get in touch</h2>
+        <h2>Let’s work together</h2>
         <p className="section-lead">
-          Reach me directly via email or connect on social platforms.
+          Open to internships, research collaborations, and project-based work.
         </p>
       </div>
 
@@ -16,6 +16,17 @@ export default function Contact() {
           <div className="contact-label">Email</div>
           <a href="mailto:princengojo@g.cjc.edu.ph" className="contact-link">
             princengojo@g.cjc.edu.ph
+          </a>
+        </div>
+
+        <div className="contact-card">
+          <div className="contact-label">Resume</div>
+          <a
+            href="/Josh_CV3.pdf"
+            className="contact-link"
+            download="Josh_CV3.pdf"
+          >
+            Download CV
           </a>
         </div>
 

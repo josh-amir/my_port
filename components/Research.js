@@ -2,31 +2,38 @@ export default function Research() {
   return (
       <div>
         <div className="section-header">
-          <p className="section-kicker">Profile</p>
+          <p className="section-kicker">About</p>
           <h2>Research profile</h2>
           <p className="section-lead">
-            Focused on the intersection of AI, ethics, policy, and human-centered
-            systems.
+            AI/ML student focused on human-centered, ethical, and useful systems.
           </p>
         </div>
 
         <div className="split-grid">
           <div>
             <p>
-              I explore the intersection of <strong>technology, ethics, policy, and philosophy</strong>, aiming to bridge the gap between AI, the humanities, and law.
+              I explore the intersection of <strong>technology, ethics, policy, and philosophy</strong>,
+              aiming to bridge AI research with real community needs.
             </p>
 
             <p>
-              My thesis focuses on <strong>Filipino Sign Language (FSL) Recognition</strong>. It asks a core question: <em>How do we design AI systems that are fair, transparent, and beneficial to local communities?</em>
+              My thesis focuses on <strong>Filipino Sign Language (FSL) recognition</strong> and asks a
+              core question: <em>How do we design AI systems that are fair, transparent, and beneficial?</em>
             </p>
 
             <p>
-              My goal is to build rigorous research that solves <strong>real-world challenges in the Philippines</strong> while advancing global conversations on <em>equitable, human-centered technology</em>.
+              I build ML prototypes, data-driven apps, and research summaries that turn complex problems
+              into clear, testable solutions.
             </p>
 
-            <p>
-              Outside of research, I read policy papers, write about tech and society, podcast, and debate ideas.
-            </p>
+            <div className="panel" style={{ marginTop: "16px" }}>
+              <h3>What I can help with</h3>
+              <ul className="item-highlights">
+                <li>Applied ML prototypes and model evaluation.</li>
+                <li>Data preparation, analysis, and documentation.</li>
+                <li>Accessible, user-centered software delivery.</li>
+              </ul>
+            </div>
           </div>
 
           <div className="panel">
@@ -38,7 +45,8 @@ export default function Research() {
                 Cor Jesu College &bull; <em>3rd Year</em>
               </div>
               <p style={{ margin: '0 0 8px 0', fontSize: '14px' }}>
-                Specialized coursework in data science, machine learning, and AI systems. Active participation in research projects focused on real-world applications and ethical considerations in technology.
+                Specialized coursework in data science, machine learning, and AI systems. Active participation in
+                research projects focused on real-world applications and ethical considerations in technology.
               </p>
             </div>
 
@@ -48,7 +56,8 @@ export default function Research() {
                 University of Mindanao, Digos &bull; <em>SHS GPA: 4.00 / 4.00</em>
               </div>
               <p style={{ margin: '0 0 8px 0', fontSize: '14px' }}>
-                Completed senior high school with distinction in STEM track. Developed foundational knowledge in advanced mathematics, physics, and chemistry with emphasis on research methodologies and scientific inquiry.
+                Completed senior high school with distinction in STEM track. Developed foundational knowledge in
+                advanced mathematics, physics, and chemistry with emphasis on research methodologies and scientific inquiry.
               </p>
             </div>
 
@@ -58,7 +67,8 @@ export default function Research() {
                 Digos City National High School &bull; <em>With Honors</em>
               </div>
               <p style={{ margin: '0 0 8px 0', fontSize: '14px' }}>
-                Graduated with honors. Studied Mandarin Chinese alongside core academic subjects. Strong foundation in language learning and cultural understanding.
+                Graduated with honors. Studied Mandarin Chinese alongside core academic subjects. Strong foundation in
+                language learning and cultural understanding.
               </p>
             </div>
           </div>
